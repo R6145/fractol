@@ -6,7 +6,7 @@
 /*   By: fmaqdasi <fmaqdasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 18:56:39 by fmaqdasi          #+#    #+#             */
-/*   Updated: 2023/12/17 19:31:54 by fmaqdasi         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:32:04 by fmaqdasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,13 @@ int	checker(int argc, char **argv)
 			return (ft_printf("Parameters too large\n"), 0);
 		return (1);
 	}
+	else if ((ft_strncmp(argv[1], "tricorn", 8) == 0) && argc == 2)
+		return (1);
 	else if ((ft_strncmp(argv[1], "help", 5) == 0))
 		return (help(), (0));
 	else
 		return (ft_printf("Unknown command or missing/additonal "),
-			ft_printf("parameters\n"), 0);
+			ft_printf("parameters \n"), 0);
 }
 
 void	help(void)
@@ -73,7 +75,8 @@ void	help(void)
 	ft_printf("shapes that exhibit self-similar patterns across ");
 	ft_printf("different scales. \n\n");
 	ft_printf("The avaiable fractals (aka commands) are \n");
-	ft_printf("  `mandelbrot`  `julia real_parameter img_parameter'   \n\n");
+	ft_printf("  `mandelbrot`  `julia real_parameter img_parameter'   ");
+	ft_printf("'tricorn'\n\n");
 	ft_printf("Controls: w(up) a(left)  s(right) d(down) l(color scheme) ");
 	ft_printf("+(zoom in) -(zoom out) m(change iteration up) ");
 	ft_printf("n(change iteration down)\n");

@@ -6,7 +6,7 @@
 /*   By: fmaqdasi <fmaqdasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 14:47:26 by fmaqdasi          #+#    #+#             */
-/*   Updated: 2023/12/17 19:44:56 by fmaqdasi         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:43:50 by fmaqdasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,11 @@ void			inti_program(t_mlx *mlx, int c, double cr, double ci);
 void			render(t_mlx *mlx, int i);
 void			render_fractal_mandle(t_mlx *mlx);
 void			render_fractal_julia(t_mlx *mlx);
+void			render_fractal_tricorn(t_mlx *mlx);
 int				mandelbrot_set(double cr, double ci, int iterations);
 int				julia_set(t_mlx *mlx, double zr, double zi);
+int				tricorn_set(t_mlx *mlx, double cr, double ci);
+void			change_scheme(t_mlx *mlx);
 // camera movement
 int				movement(int keystroke, t_mlx *mlx);
 int				movement_2(int keystroke, t_mlx *mlx);

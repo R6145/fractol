@@ -6,7 +6,7 @@
 /*   By: fmaqdasi <fmaqdasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 13:39:21 by fmaqdasi          #+#    #+#             */
-/*   Updated: 2023/12/17 19:29:17 by fmaqdasi         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:30:05 by fmaqdasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	render(t_mlx *mlx, int i)
 		render_fractal_mandle(mlx);
 	else if (i == 2)
 		render_fractal_julia(mlx);
+	else if (i == 3)
+		render_fractal_tricorn(mlx);
 }
 
 void	choice(t_mlx *mlx, char **argv)
@@ -32,6 +34,11 @@ void	choice(t_mlx *mlx, char **argv)
 	{
 		inti_program(mlx, 2, ft_atod(argv[2]), ft_atod(argv[3]));
 		render_fractal_julia(mlx);
+	}
+	else if ((ft_strncmp(argv[1], "tricorn", 8) == 0))
+	{
+		inti_program(mlx, 3, 0, 0);
+		render_fractal_tricorn(mlx);
 	}
 }
 

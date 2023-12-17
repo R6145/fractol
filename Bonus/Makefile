@@ -6,7 +6,7 @@
 #    By: fmaqdasi <fmaqdasi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/03 18:19:18 by fmaqdasi          #+#    #+#              #
-#    Updated: 2023/12/17 19:31:10 by fmaqdasi         ###   ########.fr        #
+#    Updated: 2023/12/17 19:08:40 by fmaqdasi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS        := 				julia.c \
 							movement.c \
 							parsing.c \
 							parsing_2.c \
+							tricorn.c \
 
 
 SRCSM1       :=            fractol.c \

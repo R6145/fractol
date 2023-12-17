@@ -6,11 +6,23 @@
 /*   By: fmaqdasi <fmaqdasi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 19:01:08 by fmaqdasi          #+#    #+#             */
-/*   Updated: 2023/12/17 19:45:07 by fmaqdasi         ###   ########.fr       */
+/*   Updated: 2023/12/17 19:04:57 by fmaqdasi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fractol.h"
+
+void	change_scheme(t_mlx *mlx)
+{
+	int			temp;
+	t_movemet	*move;
+
+	move = &mlx->move;
+	temp = move->color_scheme[0];
+	move->color_scheme[0] = move->color_scheme[1];
+	move->color_scheme[1] = move->color_scheme[2];
+	move->color_scheme[2] = temp;
+}
 
 void	init_movement(t_movemet *move)
 {
@@ -41,6 +53,13 @@ void	inti_program(t_mlx *mlx, int c, double cr, double ci)
 		move->fractol_choice = 2;
 		move->cr = cr;
 		move->ci = ci;
+		move->offset_x = 0;
+		move->offset_y = 0;
+		move->offset_fix = -0.15;
+	}
+	else if (c == 3)
+	{
+		move->fractol_choice = 3;
 		move->offset_x = 0;
 		move->offset_y = 0;
 		move->offset_fix = -0.15;
